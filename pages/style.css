@@ -1,0 +1,281 @@
+*{
+    background-color:#f0dada ;
+}
+.logo{
+    width: 120px;
+    height: auto;
+    border-radius: 60% ;
+
+}
+body{
+    display: flex;
+}
+.sidebar{
+    width:100px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.navbar {
+    display:flex ;
+    align-content:center;
+    justify-content: space-between;
+    padding-bottom:30px ;
+    
+}
+.main {
+    width :100%;
+    padding:30px;
+    gap: 24px;
+}
+.gapArea{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.Login{
+    width:100px;
+    height:55px;
+    border-radius:18px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:#F8EFE0;
+    box-shadow: 1px 0 0 1px #222, 10px 2px 11px 
+}
+.icons{
+    display: flex;
+    width: 50px;
+    height:auto;
+    align-items: center;
+    justify-content: center;
+}
+.sectiontab{
+    width:400px;
+    height:130px;
+
+    border-radius:18px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #222, 10px 2px 11px
+}
+.tabs{
+    display: flex;
+    padding-top: 24px;
+    gap: 24px;
+}
+.secondtab{
+    width:825px;
+    height:200px;
+    border-radius:18px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+}
+.thirdtab{
+    width:400px;
+    height:200px;
+    border-radius:18px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+}
+.fourthtab{
+    width:1250px;
+    height:150px;
+    border-radius:18px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+}
+.fithtab{
+    width:1250px;
+    height:300px;
+    border-radius:18px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+}
+.tabvet{
+     display: flex;
+    padding-top: 24px;
+    gap: 24px;
+    flex-direction: column;
+}
+.mainff{
+    display: flex;
+    flex-direction: column;
+}
+.mainfs{
+    display: flex;
+    flex-direction: row;
+}
+.footer{
+   padding-top: 100px;
+}
+.logintab{
+    padding-top: 24px;
+    width: 500px;
+    height: 300px;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    margin: 0 auto; 
+    flex-direction: column; 
+}
+.logincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.alertsection{
+    width:600px;
+    height:30px;
+    border-radius:5px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+}
+.timevar{
+    width:400px;
+    height:30px;
+    border-radius:5px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+}
+.newstab{
+    width:600px;
+    height:150px;
+    border-radius:5px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+}
+.newstab1{
+    width:600px;
+    height:150px;
+    border-radius:5px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+}
+
+.newsfeed{
+    width:800px;
+    height:500px;
+    border-radius:5px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+}
+.newstabfeed{
+    display: flex;
+    gap: 24px;
+    padding-top: 24px;
+}
+.tabsnews{
+    display: flex;
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+}
+.newsbuttonoverlay{
+    display: flex;
+    flex-direction: column;
+}
+.newsbutton{
+    width:400px;
+    height:50px;
+    border-radius:5px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    margin: 5px 0;
+    
+}
+.historytab{
+    width:1250px;
+    height:30px;
+    border-radius:5px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    margin: 5px 0;}
+.historytab1{
+    width:1250px;
+    height:300px;
+    border-radius:5px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    margin: 5px 0;}
+
+
