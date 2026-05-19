@@ -3,6 +3,7 @@
         <link rel = "stylesheet" href = "css/bootstrap.min.css">
         <link rel = "stylesheet" href = "style.css">
         <title>HOME PAGE</title>
+        <script src="chart.js-4.5.1/package/dist/chart.umd.js"></script>
     </head>
     <body>
         <div class = "mainff">
@@ -27,8 +28,134 @@
             <div class = "sectiontab"> rrrr</div>
         </div>
         <div class = "tabs">
-            <div class = "secondtab"> rrrr</div>
-            <div class = "thirdtab"> rrrr</div>
+            <div class = "secondtab"> 
+                <canvas id="myChart"></canvas>
+                <script>
+        const barctx = document.getElementById('myChart');
+        new Chart(barctx, {
+         type: 'bar',
+        data: {
+        labels: ['1 A.M','2 A.M','3 A.M','4 A.M','5 A.M','6 A.M','7 A.M','8 A.M', '9 A.M', '10 A.M', '11 A.M', '12 P.M', '1 P.M','2 P.M','3 P.M','4 P.M','5 P.M','6 P.M','7 P.M','8 P.M'],
+        datasets: [{
+        label: 'Carbon intensity gCO₂/kWh',
+        data: [70, 30, 30, 50, 20, 30, 30 ,40 , 50, 30, 40, 50, 40,40,30,20,50,12,43,67],backgroundColor: [
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green'
+            ], categoryPercentage: 1.0,
+      barPercentage: 1.0,
+        borderWidth: 1
+      }]
+      
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+        </div>
+            <div class = "thirdtab"> 
+
+<canvas id="linechart"></canvas>
+<script>
+const linectx = document.getElementById('linechart');
+
+new Chart(linectx, {
+  type: 'line',
+
+  data: {
+    labels: [
+      'monday','tuesday','wednesday','thursday','friday',
+      'sarturday','sunday'
+    ],
+
+    datasets: [{
+      label: 'Carbon intensity gCO₂/kWh',
+
+      data: [
+        80,40,30,50,70,20,30
+      ],
+
+      borderColor: 'red',     
+      backgroundColor: 'white', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    },
+
+      {label: 'solar power gCO₂/kWh',
+
+      data: [
+        20,40,20,60,80,60,50
+      ],
+
+      borderColor: 'orange',     
+      backgroundColor: 'white', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }
+, {label: 'hydro power gCO₂/kWh',
+
+      data: [
+        200,140,130,120,140,150,60
+      ],
+
+      borderColor: 'green',     
+      backgroundColor: 'white', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }]
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+</script>
+</div>
         </div>
         <div class = "tabs">
             <div class = "fourthtab"> rrrr</div>
@@ -53,5 +180,4 @@
         </footer>
 
         </body>
-    </body>
 </html>    
