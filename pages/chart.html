@@ -1,0 +1,77 @@
+<script src="chart.js-4.5.1/package/dist/chart.umd.js"></script> 
+
+<canvas id="linechart1"></canvas>
+<script>
+const linectx1 = document.getElementById('linechart1');
+
+new Chart(linectx1, {
+  type: 'line',
+
+  data: {
+    labels: [
+      'monday','tuesday','wednesday','thursday','friday',
+      'sarturday','sunday'
+    ],
+
+    datasets: [{
+      label: 'National Demnad Energy',
+
+      data: [
+        280,240,230,250,260,220,240
+      ],
+
+      borderColor: 'red',     
+      backgroundColor: 'white', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    },
+
+      {label: 'Actual Demnad Net',
+
+      data: [
+        220,240,220,270,280,250,260
+      ],
+
+      borderColor: 'orange',     
+      backgroundColor: 'white', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }
+, {label: 'Actual Demand Gross',
+
+      data: [
+        200,240,230,220,300,250,260
+      ],
+
+      borderColor: 'green',     
+      backgroundColor: 'white', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }]
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    scales: {
+      y: {
+        beginAtZero: false
+      }
+    }
+  }
+});
+</script>
+linechart1

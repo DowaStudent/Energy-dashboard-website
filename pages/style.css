@@ -1,14 +1,14 @@
-*{
+body{
     background-color:#f0dada ;
+    font-family: 'MyCustomFont', 'Abril Fatface', 'Georgia', 'Times New Roman', serif;
+    display: flex;
+    justify-content: center; /* horizontal */
 }
 .logo{
     width: 120px;
     height: auto;
     border-radius: 60% ;
 
-}
-body{
-    display: flex;
 }
 .sidebar{
     width:100px;
@@ -39,34 +39,38 @@ body{
 .Login{
     width:100px;
     height:55px;
-    border-radius:18px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color:#F8EFE0;
-    box-shadow: 1px 0 0 1px #222, 10px 2px 11px 
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px 
 }
 .icons{
     display: flex;
-    width: 50px;
+    width: 60px;
     height:auto;
     align-items: center;
     justify-content: center;
 }
-.sectiontab{
-    width:400px;
-    height:130px;
+.iconsM{
+    display: flex;
+    width: 80px;
+    height:auto;
+    align-items: center;
+    justify-content: center;}
 
-    border-radius:18px;
+.sectiontab{
+    width:417px;
+    height:130px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color: #F8EFE0;
-     box-shadow: 1px 0 0 1px #222, 10px 2px 11px
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px
 }
 .tabs{
     display: flex;
@@ -74,52 +78,48 @@ body{
     gap: 24px;
 }
 .secondtab{
-    width:825px;
-    height:200px;
-    border-radius:18px;
-    font-size:22px;
+    width:845px;
+    height:275px;
+    font: size 12px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color: #F8EFE0;
-     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
 }
 .thirdtab{
-    width:400px;
-    height:200px;
-    border-radius:18px;
+    width:430px;
+    height:275px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color: #F8EFE0;
-     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
 }
 .fourthtab{
-    width:1250px;
+    width:1300px;
     height:150px;
-    border-radius:18px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color: #F8EFE0;
-     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
 }
 .fithtab{
-    width:1250px;
+    width:1300px;
     height:300px;
-    border-radius:18px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color: #F8EFE0;
-     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
 }
 .tabvet{
      display: flex;
@@ -142,86 +142,73 @@ body{
     padding-top: 24px;
     width: 500px;
     height: 300px;
-    border-radius: 18px;
     font-size: 22px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #F8EFE0;
-    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
     margin: 0 auto; 
     flex-direction: column; 
 }
 .logincontainer{
     display: flex;
-    justify-content: center;
     align-items: center;
     padding-top: 40px;
     width: 100%;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 .alertsection{
     width:600px;
     height:30px;
-    border-radius:5px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
-    justify-content:center;
     background-color: #F8EFE0;
-     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    padding-left: 10px;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 .timevar{
-    width:400px;
+    width:100px;
     height:30px;
-    border-radius:5px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content: center;
     background-color: #F8EFE0;
-     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
 }
 .newstab{
     width:600px;
     height:150px;
-    border-radius:5px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
-    justify-content:center;
     background-color: #F8EFE0;
-     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
-}
-.newstab1{
-    width:600px;
-    height:150px;
-    border-radius:5px;
-    font-size:22px;
-    font-weight:bold;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background-color: #F8EFE0;
-     box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
 .newsfeed{
     width:800px;
     height:500px;
-    border-radius:5px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color: #F8EFE0;
-    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 .newstabfeed{
     display: flex;
@@ -241,41 +228,102 @@ body{
 }
 .newsbutton{
     width:400px;
-    height:50px;
-    border-radius:5px;
+    height:65px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color: #F8EFE0;
-    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
     margin: 5px 0;
     
 }
 .historytab{
     width:1250px;
     height:30px;
-    border-radius:5px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color: #F8EFE0;
-    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
     margin: 5px 0;}
 .historytab1{
     width:1250px;
     height:300px;
-    border-radius:5px;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
     justify-content:center;
     background-color: #F8EFE0;
-    box-shadow: 1px 0 0 1px #222, 10px 2px 11px;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
     margin: 5px 0;}
+.loginform{
+    background-color:#F8EFE0 ;
+}
+.logininput{
+    background-color: wheat;
 
+}
+.loginsubmit{
+    background-color: wheat;
 
+}
+.forgot-password{
+    background-color:#F8EFE0;
+
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('Abril_Fatface/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;}
+    
+#myChart{
+    width: 100% !important;
+    height: 100% !important;
+    background-color: F8EFE0;
+}
+#linechart{
+    width: 100% !important;
+    height: 100% !important;
+    background-color: F8EFE0;}
+#myChartpie{
+    background-color:  F8EFE0;
+}
+#linechart1{
+    background-color:  F8EFE0;
+}
+#map{
+    width: 1000px;
+    height: 100vh;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    display: flex;
+}
+.imagecontainersmall{
+    width: 150px;
+    height: 150px;
+    display: flex;    
+}
+.imagetextcontainer{
+    padding-left: 23px;
+    display: flex;
+
+}
+.imagecontainerlarge{
+    display: flex;    }
+.newscaption{
+    display: flex;
+    flex-direction: column;
+}
+.articleImage{
+    display: flex;
+    align-items: center;
+    width: 1200;
+    justify-content: center;
+    align-items: center;
+}

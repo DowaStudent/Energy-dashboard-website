@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Energy Map</title>
+
+    <!-- Local Leaflet CSS -->
+    <link rel="stylesheet" href="leaflet/dist/leaflet.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html,
+        body{
+            width:100%;
+            height:100%;
+        }
+
+        #map{
+            width:100vw;
+            height:100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <!-- Local Leaflet JS -->
+    <script src="leaflet/dist/leaflet.js"></script>
+
+    <script>
+
+        // Create map centered on UK
+        const map = L.map('map').setView([54.5, -3], 6);
+
+        // Restrict view to UK
+        const bounds = [
+            [49.5, -8.5],
+            [60.9, 2.0]
+        ];
+
+        map.setMaxBounds(bounds);
+
+        // OpenStreetMap tiles
+        L.tileLayer(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            {
+                attribution: '&copy; OpenStreetMap contributors'
+            }
+        ).addTo(map);
+
+        // Energy production data
+        const powerStations = [
+
+            {
+                name: "Wind Farm",
+                type: "Wind",
+                location: [57.4, -2.1],
+                production: 1400,
+                color: "green"
+            },
+
+            {
+                name: "Solar Grid",
+                type: "Solar",
+                location: [53.48, -2.24],
+                production: 500,
+                color: "orange"
+            },
+
+            {
+                name: "Nuclear Station",
+                type: "Nuclear",
+                location: [51.2, -3.1],
+                production: 3200,
+                color: "red"
+            },
+
+            {
+                name: "Hydro Station",
+                type: "Hydro",
+                location: [56.8, -4.2],
+                production: 900,
+                color: "blue"
+            }
+        ];
+
+        // Add circles to map
+        powerStations.forEach(station => {
+
+            L.circle(station.location, {
+                color: station.color,
+                fillColor: station.color,
+                fillOpacity: 0.5,
+
+                // Size based on energy production
+                radius: station.production * 25
+            })
+            .addTo(map)
+            .bindPopup(`
+                <strong>${station.name}</strong><br>
+                Type: ${station.type}<br>
+                Energy Produced: ${station.production} MW
+            `);
+
+        });
+
+    </script>
+
+</body>
+</html>

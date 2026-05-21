@@ -12,8 +12,7 @@
             <img onclick=" window.location.href='news.html'" class = "icons" src = " images/Noun_Project_news_icon_1401545.svg.png">
             <img onclick=" window.location.href='about.html'" class = "icons" src = " images/About_icon_(The_Noun_Project).svg.png">
             <img onclick=" window.location.href='history.html'" class = "icons" src = " images/OOjs_UI_icon_history.svg.png">
-            <img onclick=" window.location.href='map.html'" class = "icons" src = " images/Rubin_Map_Icon_(rubin-Map).tiff.jpg">
-            <img onclick=" window.location.href='settings.html'" class = "icons" src = " images/Codex_icon_settings_color-base.svg.png">
+            <img onclick=" window.location.href='map.html'" class = "iconsM" src = " images/Rubin_Map_Icon__rubin-Map_.tiff-removebg-preview.png">
         </div>
 
         <div class = "main">
@@ -23,9 +22,15 @@
         </nav>
         
         <div class = "tabs">
-            <div class = "sectiontab"> rrrr</div>
-            <div class = "sectiontab"> rrrr</div>
-            <div class = "sectiontab"> rrrr</div>
+            <div class = "sectiontab"> Total usage today
+                  1,847 kWh
+                  <span style="color: green ; background-color: F8EFE0;">↑4% vs yesterday</span></div>
+            <div class = "sectiontab"><P style="background-color: F8EFE0;">Cost today
+                                          £312
+                                          <span style="color: red;background-color:F8EFE0 ;">↓ 2% vs yesterday</span></P></div>
+            <div class = "sectiontab"> peak demand
+                                        <span style="color: orange;background-color: F8EFE0;">142 kW</span>
+                                        at 09:14</div>
         </div>
         <div class = "tabs">
             <div class = "secondtab"> 
@@ -158,10 +163,132 @@ new Chart(linectx, {
 </div>
         </div>
         <div class = "tabs">
-            <div class = "fourthtab"> rrrr</div>
+            <div class = "fourthtab"> 
+              <canvas id="myChartpie"></canvas>
+
+              <script>
+const ctxpie = document.getElementById('myChartpie');
+
+new Chart(ctxpie, {
+  type: 'pie',
+
+  data: {
+    labels: [
+      'wind','hydro','solar','gas','nuclear',
+      'oil','coal'
+    ],
+
+    datasets: [{
+      label: 'Carbon intensity gCO₂/kWh',
+
+      data: [
+        4,11,14,15,24,12,20
+      ],
+
+      borderColor: 'black',     
+      backgroundColor: ['#d5edff','blue','yellow','#b99079','#940000','#595f61','#040400'], 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    },
+
+      ]
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+</script>
+            </div>
         </div>
         <div class = "tabs">
-            <div class = "fithtab"> rrrr</div>
+            <div class = "fithtab"> 
+              <canvas id="linechart1"></canvas>
+<script>
+const linectx1 = document.getElementById('linechart1');
+
+new Chart(linectx1, {
+  type: 'line',
+
+  data: {
+    labels: [
+      'monday','tuesday','wednesday','thursday','friday',
+      'sarturday','sunday'
+    ],
+
+    datasets: [{
+      label: 'National Demnad Energy',
+
+      data: [
+        280,240,230,250,260,220,240
+      ],
+
+      borderColor: 'red',     
+      backgroundColor: 'red', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    },
+
+      {label: 'Actual Demnad Net',
+
+      data: [
+        220,240,220,270,280,250,260
+      ],
+
+      borderColor: 'orange',     
+      backgroundColor: 'orange', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }
+, {label: 'Actual Demand Gross',
+
+      data: [
+        200,240,230,220,300,250,260
+      ],
+
+      borderColor: 'green',     
+      backgroundColor: 'green', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }]
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    scales: {
+      y: {
+        beginAtZero: false
+      }
+    }
+  }
+});
+</script>
+            </div>
         </div>
         </div>
         </div>
