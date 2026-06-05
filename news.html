@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <!-- style sheet for styling the page -->
+        <link rel = "stylesheet" href = "style.css" type = "text/css">
+        <!-- tile of page -->
+        <title>HOME PAGE</title>
+    </head>
+    <body>
+        <div class = "mainff">
+        <div class = "mainfs">
+            <!-- sidebar for navigation -->
+        <div class = "sidebar">
+            <img alt = "news icon" onclick=" window.location.href='news.html'" class = "icons" src = " images/Noun_Project_news_icon_1401545.svg.png">
+            <img alt = "about icon" onclick=" window.location.href='about.html'" class = "icons" src = " images/About_icon_(The_Noun_Project).svg.png">
+            <img alt = "history icon" onclick=" window.location.href='history.html'" class = "icons" src = " images/OOjs_UI_icon_history.svg.png">
+            <img alt = "map icon" onclick=" window.location.href='map.html'" class = "iconsM" src = " images/Rubin_Map_Icon__rubin-Map_.tiff-removebg-preview.png">
+        </div>
+
+        <div class = "main">
+            <!-- navigation bar for navigation-->
+        <nav class = "navbar">
+            <div class = "gapArea"><img alt = "company lego" class = "logo" src = "images/Untitled.png" onclick="window.location.href = 'index.html'"> </img><h1 class = "Titletext" onclick="window.location.href = 'index.html'">UNIENERGY</h1></div>
+            <button class = "login" onclick=" window.location.href='login.html'"> LOGIN </button>
+        </nav>
+        <!-- contains useful information like alerts and the time -->
+        <div class = "tabs">
+            <!-- page alert for important news or updates  -->
+            <div class = "alertsection"> <p style ="font-size: 14px;"> Alert:<span style="color: red;"> Energy prices have wiped £30 bn off the economy </span></p></div>
+            <!-- creates updating time script -->
+            <div class = "timevar"> 
+                <div id = "timeid"></div>
+                <script>
+                    function updateTime(){
+                        const now = new Date();
+                        //updates the time
+                        document.getElementById("timeid").innerText = now.toLocaleTimeString('en-GB');
+                }
+                    updateTime();
+                    setInterval(updateTime, 1000);
+                </script>  
+
+            </div>
+
+        </div>
+        <!-- shows the news  -->
+        <div class = "tabsnews">
+            <div class = "newstab">
+                 <div ><img alt = "changes image" onclick=" window.location.href='NewsArticles/article1.html'" class = "imagecontainersmall" src = "images/solar.jpg"></div>
+                 <div  onclick=" window.location.href='NewsArticles/article1.html'" class = "imagetextcontainer">
+                    <p>Why cheap power could matter more than clean power in the push for net zero</p>
+
+                 </div>
+                </div>
+            <div class = "newstab">
+                <div ><img alt = "changes image" onclick=" window.location.href='NewsArticles/article2.html'" class = "imagecontainersmall" src = "images/windjpg.webp"></div>
+                 <div  onclick=" window.location.href='NewsArticles/article2.html'" class = "imagetextcontainer">
+                    <p>Wind farm bid next to Galloway reservoir submitted</p>
+
+                 </div>
+                </div>
+            </div>
+            <!-- a more extensive news area for more news -->
+        <div class = "newstabfeed">
+            <div class = "newscaption">
+            <div class = "newsfeed">
+                <!-- huge image that shows a visual representation of the news -->
+                <img alt = "changes image" id = "mainNewsImage" class = "imagecontainerlarge" src = "images/energy1.jpg">
+                
+            </div>
+            <!-- link to the article -->
+            <a id  = "mainNewsLink" href="NewsArticles/energy1.html" style="font-size: 25px; color: black; width: 700px;">Dwindling diesel and jet fuel supplies due to Iran war prompt warning from EU - as return to 2022 measures considered</a>
+            </div>
+            <!-- buttons to change the news thats beiong shown -->
+            <div class =" newsbuttonoverlay">
+                <button class = "newsbutton" onclick="changeNews('images/energy1.jpg',
+                                                                'NewsArticles/energy1.html',
+                                                                'Dwindling diese and jet fuel supplies due to Iran war prompt warning from EU - as return to 2022 measures considered')"> Dwindling diese and jet fuel supplies </button>
+                <button class = "newsbutton" onclick="changeNews('images/energy2.jpg',
+                                                                'NewsArticles/energy2.html',
+                                                                'Iran war: The outlook for your finances - whether hostilities end or not')">Iran war: The outlook for your finances</button>
+                <button class = "newsbutton" onclick="changeNews('images/energy3.jpg',
+                                                                'NewsArticles/energy3.html',
+                                                                'Biggest ever release of oil reserves to ease war supply disruption')"> Biggest ever release of oil reserves  </button>
+                <button class = "newsbutton" onclick="changeNews('images/energy4.jpg',
+                                                                'NewsArticles/energy4.html',
+                                                                'Energy price cap to fall in April but threat of war hangs over outlook')"> Energy price cap to fall in April </button>
+                <button class = "newsbutton" onclick="changeNews('images/energy5.jpg',
+                                                                'NewsArticles/energy5.html',
+                                                                'Scottish independence could reduce energy bills by more than a third, First Minister John Swinney says')"> Scottish independence could reduce energy bills </button>
+                <button class = "newsbutton" onclick="changeNews('images/energy6.jpg',
+                                                                'NewsArticles/energy6.html',
+                                                                'Energy minister says -theres no shortcut- to bringing down bills - as price cap rise announced')"> Energy minister says -theres no shortcut- to bringing down bills </button>
+                <button class = "newsbutton" onclick="changeNews('images/energy7.jpg',
+                                                                'NewsArticles/energy7.html',
+                                                                'ExxonMobil to close Mossmorran plastics plant in Fife with hundreds of jobs at risk')"> ExxonMobil to close Mossmorran plastics plant </button>
+                <button class = "newsbutton" onclick="changeNews('images/energy8.jpg',
+                                                                'NewsArticles/energy8.html',
+                                                                'Clean energy projects given £30m funding')">Clean energy projects</button>
+                
+            </div>
+        </div>
+        </div>
+        </div>
+        <footer class = "footer">
+            <h2>UNIENERGY</h2>
+            <p>providing reliable energy through out the countrty
+
+            </p>
+            <ul>
+                <li> <a href  = "index.html">HOME</a> </li>
+                <li> <a href  = "history.html">HISTORY</a> </li>
+                <li> <a href  = "about.html">ABOUTUS</a> </li>
+                <li> <a href  = "news.html">NEWS</a> </li>
+            </ul>
+            © 2026 Acme Studio Ltd. All rights reserved.
+        </footer>
+    <script>
+        <!-- script for changing the news  -->
+
+    let currentLink = "NewsArticles/energy1.html";
+
+    function changeNews(imageSrc, articleLink, articleTitle){
+
+        document.getElementById("mainNewsImage").src = imageSrc;
+
+        document.getElementById("mainNewsLink").href = articleLink;
+
+        document.getElementById("mainNewsLink").innerText = articleTitle;
+
+        currentLink = articleLink;
+    }
+
+    function goToArticle(){
+        window.location.href = currentLink;
+    }
+
+</script>
+    <!-- footer for more information -->
+    <footer class = "footer">
+            <h2>UNIENERGY</h2>
+            <p>providing reliable energy through out the countrty
+
+            </p>
+            <ul>
+                <li> <a href  = "index.html">HOME</a> </li>
+                <li> <a href  = "history.html">HISTORY</a> </li>
+                <li> <a href  = "about.html">ABOUTUS</a> </li>
+                <li> <a href  = "news.html">NEWS</a> </li>
+            </ul>
+            © 2026 Acme Studio Ltd. All rights reserved.
+        </footer>
+        
+
+    </body>
+</html>    

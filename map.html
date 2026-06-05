@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <!--  imports libraries and framworks used -->
+        <link rel = "stylesheet" href = "style.css" type = "text/css">
+        <link rel="stylesheet" href="leaflet/dist/leaflet.css" type = "text/css">
+        <!-- tile of page -->
+        <title>MAP PAGE</title>
+    </head>
+    <!--  contains all the data and containers for the map page (contains everything)-->
+    <body>
+        <div class = "mainff">
+        <div class = "mainfs">
+            <!-- sidebar for navigation  -->
+
+        <div class = "sidebar">
+            <img alt = "news icon" onclick=" window.location.href='news.html'" class = "icons" src = " images/Noun_Project_news_icon_1401545.svg.png">
+            <img alt = "about icon" onclick=" window.location.href='about.html'" class = "icons" src = " images/About_icon_(The_Noun_Project).svg.png">
+            <img alt = "history icon" onclick=" window.location.href='history.html'" class = "icons" src = " images/OOjs_UI_icon_history.svg.png">
+            <img alt = "map icon" onclick=" window.location.href='map.html'" class = "iconsM" src = " images/Rubin_Map_Icon__rubin-Map_.tiff-removebg-preview.png">
+        </div>
+
+        <div class = "main">
+            <!-- navigation bar for navigating throught the site easily -->
+
+        <nav class = "navbar">
+            <div class = "gapArea"><img alt = "company lego" class = "logo" src = "images/Untitled.png" onclick="window.location.href = 'index.html'"> </img><h1 class = "Titletext" onclick="window.location.href = 'index.html'">UNIENERGY</h1></div>
+        </nav>
+    <!--  calls the script used for drawing the map-->
+
+        <script src="leaflet/dist/leaflet.js"></script>
+        <!-- draws and creates the map -->
+
+        <div id = "map" ></div>
+        <script>
+        //focuses the camera on the united kingdom
+
+             const map = L.map('map').setView([54.5, -2.5], 6);
+
+            const bounds = [
+            [49.5, -8.5],
+            [60.9, 2.0]
+        ];
+        map.setMaxBounds(bounds);
+        L.tileLayer(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            {
+                attribution: '&copy; OpenStreetMap contributors'
+            }
+        // creates the power station markers on the map
+        ).addTo(map);
+
+
+        const powerStations = [
+
+            {
+                name: "Wind Farm",
+                type: "Wind",
+                location: [57.4, -2.1],
+                production: 1400,
+                color: "green"
+            },
+
+            {
+                name: "Solar Grid",
+                type: "Solar",
+                location: [53.48, -2.24],
+                production: 500,
+                color: "orange"
+            },
+
+            {
+                name: "Nuclear Station",
+                type: "Nuclear",
+                location: [51.2, -3.1],
+                production: 3200,
+                color: "red"
+            },
+
+            {
+                name: "Hydro Station",
+                type: "Hydro",
+                location: [56.8, -4.2],
+                production: 900,
+                color: "blue"
+            },
+             {
+                name: "Gas Station",
+                type: "Gas",
+                location: [54.8, -3.2],
+                production: 800,
+                color: "grey"
+            },
+             {
+                name: "Coal production",
+                type: "coal",
+                location: [56.3, -5.2],
+                production: 2000,
+                color: "purple"
+            }
+        ];
+
+        powerStations.forEach(station => {
+
+            L.circle(station.location, {
+                color: station.color,
+                fillColor: station.color,
+                fillOpacity: 0.5,
+                radius: station.production * 25
+            })
+            .addTo(map)
+            .bindPopup(`
+                <strong>${station.name}</strong><br>
+                Type: ${station.type}<br>
+                Energy Produced: ${station.production} MW
+            `);
+
+        });
+        </script>
+
+        </div>
+        </div>
+        <!-- footer that has company information -->
+        <footer class = "footer">
+            <h2>UNIENERGY</h2>
+            <p>providing reliable energy through out the countrty
+
+            </p>
+            <ul>
+                <li> <a href  = "index.html">HOME</a> </li>
+                <li> <a href  = "history.html">HISTORY</a> </li>
+                <li> <a href  = "about.html">ABOUTUS</a> </li>
+                <li> <a href  = "news.html">NEWS</a> </li>
+            </ul>
+            © 2026 Acme Studio Ltd. All rights reserved.
+        </footer>
+
+        </body>
+    </body>
+</html>    

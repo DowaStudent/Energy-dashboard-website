@@ -1,0 +1,562 @@
+/*syles the whole document*/
+body{
+    background-color:#f0dada ;
+    font-family: 'MyCustomFont', 'Abril Fatface', 'Georgia', 'Times New Roman', serif;
+    display: flex;
+    justify-content: center; /* horizontal */
+}
+/*logo of the website*/
+/*main/landing page*/
+.logo{
+    width: 120px;
+    height: auto;
+    border-radius: 60% ;
+
+}
+/*the side bar for navigation*/
+.sidebar{
+    width:100px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+}
+/*navigation bar at the top of the page, includes logo ,company name and log in button*/
+.navbar {
+    display:flex ;
+    align-content:center;
+    justify-content: space-between;
+    padding-bottom:30px ;
+    
+}
+/*container for all the elemenst and objects*/
+.main {
+    width :100%;
+    gap: 24px;
+}
+.gapArea{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+/*log in container*/
+.Login{
+    width:100px;
+    height:55px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:#F8EFE0;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px 
+}
+/*icons in the side bar*/
+.icons{
+    display: flex;
+    width: 60px;
+    height:auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconsM{
+    display: flex;
+    width: 80px;
+    height:auto;
+    align-items: center;
+    justify-content: center;}
+/*container that holds data such as cost*/
+.sectiontab{
+    width:400px;
+    height:130px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px
+}
+/*container for sectiontabs*/
+.tabs{
+    display: flex;
+    padding-top: 24px;
+    gap: 24px;
+}
+/*holds graphs for  carbon intensity*/
+.secondtab{
+    width:825px;
+    height:275px;
+    font-size:12px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+}
+/* holds line graphs */
+.thirdtab{
+    width:400px;
+    height:275px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+}
+/*holds pie chart graph*/
+.fourthtab{
+    width:1250px;
+    height:150px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+}
+/*holds a line graph for  energy demand*/
+.fithtab{
+    width:1250px;
+    height:300px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+}
+/*container */
+.mainff{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+}
+/*container */
+.mainfs{
+    display: flex;
+    flex-direction: row;
+}
+/* footer that shows information */
+.footer{
+   padding-top: 100px;
+   padding-left:24px; ;
+}
+/* login tab container */
+/*login page*/
+.logintab{
+    padding-top: 24px;
+    width: 500px;
+    height: 300px;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    margin: 0 auto; 
+    flex-direction: column; 
+}
+/*a container that contains logintab*/
+.logincontainer{
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+/*news page*/
+/*container for alerts*/
+.alertsection{
+    width:600px;
+    height:30px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    padding-left: 10px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+/*container for the time*/
+.timevar{
+    width:100px;
+    height:30px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color: #F8EFE0;
+     box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+}
+/*container for the news*/
+.newstab{
+    width:600px;
+    height:150px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+/*holds all the news tab containers*/
+.newsfeed{
+    width:800px;
+    height:500px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+/*container for all the news that is under the newsfeed container*/
+.newstabfeed{
+    display: flex;
+    gap: 24px;
+    padding-top: 24px;
+}
+/*container for the large container for the news*/
+.tabsnews{
+    display: flex;
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+/*container for the news changing buttons*/
+.newsbuttonoverlay{
+    display: flex;
+    flex-direction: column;
+}
+/*news button*/
+.newsbutton{
+    width:400px;
+    height:65px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    margin: 5px 0;
+    
+}
+/*history page*/
+/*contains the buttons for changing the graphs*/
+.historytab{
+    width:1200px;
+    height:30px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    margin: 5px 0;}
+
+/* conatins the first graphn*/    
+.historytab1{
+    width:1200px;
+    height:300px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F8EFE0;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    margin: 5px 0;}
+/*adds a new font, for design purposes*/
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('Abril_Fatface/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;}
+/**/   
+#myChart{
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #F8EFE0;
+}
+/*conatiners for the graphs*/
+#linechart{
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #F8EFE0;}
+#myChartpie{
+    background-color:  #F8EFE0;
+}
+#linechart1{
+    background-color:  #F8EFE0;
+}
+#map{
+    width: 1000px;
+    height: 100vh;
+    box-shadow: 1px 0 0 1px #6694cd, 10px 2px 11px;
+    display: flex;
+}
+/*conatiner for images*/
+.imagecontainersmall{
+    width: 150px;
+    height: 150px;
+    display: flex;    
+}
+.imagetextcontainer{
+    padding-left: 23px;
+    display: flex;
+
+}
+/* used for invidual articles*/
+.imagecontainerlarge{
+    display: flex;    }
+.newscaption{
+    display: flex;
+    flex-direction: column;
+}
+.articleImage{
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+/*button used in the history page*/
+.historybutton{
+    width:100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+}
+.historybutton.active{
+    background-color:#6694cd;
+    color: white;
+}
+/*devices smaller than 1024*/
+@media screen and (max-width: 1024px) {
+    .mainff {
+        width: 95%;
+    }
+
+    .tabs,
+    .tabsnews,
+    .newstabfeed {
+        flex-direction: column;
+    }
+
+    .sectiontab,
+    .secondtab,
+    .thirdtab,
+    .fourthtab,
+    .fithtab,
+    .historytab,
+    .historytab1,
+    .newstab,
+    .newsfeed,
+    .alertsection {
+        width: 100%;
+    }
+
+    .secondtab,
+    .thirdtab,
+    .fithtab,
+    .historytab1,
+    .newsfeed {
+        height: auto;
+        min-height: 300px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .gapArea {
+        gap: 20px;
+    }
+
+    #map {
+        width: 100%;
+        height: 500px;
+    }
+
+    .articleImage {
+        width: 100%;
+    }
+}
+
+
+/* 
+   MOBILE (768px and below)
+ */
+@media screen and (max-width: 768px) {
+    .login{
+        display: none;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .mainfs {
+        flex-direction: column;
+    }
+    .mainff {
+        width: 95%;
+    }
+    /* Sidebar becomes horizontal */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .icons {
+        width: 45px;
+    }
+    .iconsM {
+        width: 55px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .gapArea {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .logo {
+        width: 80px;
+    }
+    .Titletext {
+        font-size: 24px;
+    }
+    .tabs,
+    .tabsnews,
+    .newstabfeed {
+        flex-direction: column;
+    }
+
+    .sectiontab,
+    .secondtab,
+    .thirdtab,
+    .fourthtab,
+    .fithtab,
+    .newstab,
+    .newsfeed,
+    .alertsection,
+    .historytab,
+    .historytab1,
+    .logintab {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .sectiontab {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .secondtab,
+    .thirdtab,
+    .fourthtab,
+    .fithtab,
+    .historytab1,
+    .newsfeed {
+        height: auto;
+        min-height: 250px;
+    }
+    .newsbutton {
+        width: 100%;
+    }
+    .historybutton {
+        width: 80px;
+        font-size: 16px;
+    }
+    #map {
+        width: 100%;
+        height: 400px;
+    }
+    .articleImage {
+        width: 100%;
+    }
+    .imagecontainersmall {
+        width: 100px;
+        height: 100px;
+    }
+    canvas {
+        width: 100% !important;
+        height: 300px !important;
+    }
+    .footer {
+        text-align: center;
+        padding-top: 50px;
+        padding-left: 0;
+    }
+}
+
+
+/* 
+   SMALL PHONES (480px)
+*/
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 60px;
+    }
+    .icons {
+        width: 35px;
+    }
+    .iconsM {
+        width: 40px;
+    }
+    .sectiontab,
+    .newstab,
+    .alertsection,
+    .historytab,
+    .historytab1 {
+        font-size: 16px;
+    }
+    .newsbutton {
+        font-size: 16px;
+        height: 50px;
+    }
+    .historybutton {
+        width: 70px;
+        font-size: 14px;
+    }
+    canvas {
+        height: 220px !important;
+    }
+    .imagecontainersmall {
+        width: 80px;
+        height: 80px;
+    }
+    #map {
+        height: 300px;
+    }
+}

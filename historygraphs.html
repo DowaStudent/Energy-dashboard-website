@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart Example</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .historybutton{
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .chart-container{
+            width: 900px;
+            height: 400px; /* IMPORTANT */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="historytab">
+        <button onclick="changeWeek()" class="historybutton">
+            This Week
+        </button>
+
+        <button onclick="changeMonth()" class="historybutton">
+            Last Month
+        </button>
+
+        <button onclick="changeYear()" class="historybutton">
+            This Year
+        </button>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="linechart"></canvas>
+    </div>
+
+    <script>
+        const linectx = document.getElementById('linechart');
+
+        const myChart = new Chart(linectx, {
+            type: 'line',
+
+            data: {
+                labels: [
+                    'Monday','Tuesday','Wednesday',
+                    'Thursday','Friday','Saturday','Sunday'
+                ],
+
+                datasets: [
+                    {
+                        label: 'Carbon intensity gCO₂/kWh',
+                        data: [80,40,30,50,70,20,30],
+                        borderColor: 'red',
+                        tension: 0.4
+                    },
+
+                    {
+                        label: 'Solar power gCO₂/kWh',
+                        data: [20,40,20,60,80,60,50],
+                        borderColor: 'orange',
+                        tension: 0.4
+                    },
+
+                    {
+                        label: 'Hydro power gCO₂/kWh',
+                        data: [200,140,130,120,140,150,60],
+                        borderColor: 'green',
+                        tension: 0.4
+                    }
+                ]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        function changeWeek() {
+            myChart.data.labels = [
+                'Monday','Tuesday','Wednesday',
+                'Thursday','Friday','Saturday','Sunday'
+            ];
+
+            myChart.data.datasets[0].data = [80,40,30,50,70,20,30];
+            myChart.data.datasets[1].data = [20,40,20,60,80,60,50];
+            myChart.data.datasets[2].data = [200,140,130,120,140,150,60];
+
+            myChart.update();
+        }
+
+        function changeMonth() {
+            myChart.data.labels = [
+                'Week 1','Week 2','Week 3','Week 4'
+            ];
+
+            myChart.data.datasets[0].data = [90,70,100,80];
+            myChart.data.datasets[1].data = [40,50,70,60];
+            myChart.data.datasets[2].data = [180,160,140,170];
+
+            myChart.update();
+        }
+
+        function changeYear() {
+            myChart.data.labels = [
+                'Jan','Feb','Mar','Apr',
+                'May','Jun','Jul'
+            ];
+
+            myChart.data.datasets[0].data = [120,100,90,80,110,95,70];
+            myChart.data.datasets[1].data = [50,60,40,80,90,100,85];
+            myChart.data.datasets[2].data = [220,200,190,180,170,160,150];
+
+            myChart.update();
+        }
+    </script>
+
+</body>
+</html>

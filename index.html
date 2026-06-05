@@ -1,0 +1,347 @@
+<html>
+    <head>
+      <!-- imports libraries and frameworks -->
+        <link rel = "stylesheet" href = "style.css"  type = "text/css">
+        <script src="node_modules/chart.js/dist/chart.umd.js"></script>
+        <!-- title of page -->
+        <title>HOME PAGE</title>
+    </head>
+    <!-- container for everythinh on the page-->
+
+    <body>
+        <div class = "mainff">
+        <div class = "mainfs">
+          <!-- sidebar -->
+        <div class = "sidebar">
+            <img alt = "news icon" onclick=" window.location.href='news.html'" class = "icons" src = " images/Noun_Project_news_icon_1401545.svg.png">
+            <img alt = "about icon" onclick=" window.location.href='about.html'" class = "icons" src = " images/About_icon_(The_Noun_Project).svg.png">
+            <img alt = "history icon" onclick=" window.location.href='history.html'" class = "icons" src = " images/OOjs_UI_icon_history.svg.png">
+            <img alt = "map icon" onclick=" window.location.href='map.html'" class = "iconsM" src = " images/Rubin_Map_Icon__rubin-Map_.tiff-removebg-preview.png">
+        </div>
+        <!-- contains the graphs and and other containers -->
+
+        <div class = "main">
+          <!--navigation bar for navigation  -->
+
+        <nav class = "navbar">
+            <div class = "gapArea"><img alt = "company lego" class = "logo" src = "images/Untitled.png" onclick="window.location.href = 'index.html'"> </img><h1 class = "Titletext" onclick="window.location.href = 'index.html'">UNIENERGY</h1></div>
+            <button class = "login" onclick=" window.location.href='login.html'"> LOGIN </button>
+        </nav>
+        <!-- tabs  that display useful information  -->
+
+        <div class = "tabs">
+            <div class = "sectiontab"> Total usage today
+                  1,847 kWh
+                  <span style="color: green ; background-color: #F8EFE0;">↑4% vs yesterday</span></div>
+            <div class = "sectiontab"><P style="background-color: #F8EFE0;">Cost today
+                                          £312
+                                          <span style="color: red;background-color:#F8EFE0 ;">↓ 2% vs yesterday</span></P></div>
+            <div class = "sectiontab"> peak demand
+                                        <span style="color: orange;background-color: #F8EFE0;">142 kW</span>
+                                        at 09:14</div>
+        </div>
+        <!-- contains the first grapgh(bar) -->
+
+        <div class = "tabs">
+          <!-- first grapgh container -->
+
+            <div class = "secondtab"> 
+              <!-- creates space to draw grapgh -->
+
+                <canvas alt = "main menu graph 1" id="myChart"></canvas>
+                <!-- draws the grapgh -->
+
+                <script>
+        const barctx = document.getElementById('myChart');
+        new Chart(barctx, {
+         type: 'bar',
+        data: {
+          //labels used
+        labels: ['1 A.M','2 A.M','3 A.M','4 A.M','5 A.M','6 A.M','7 A.M','8 A.M', '9 A.M', '10 A.M', '11 A.M', '12 P.M', '1 P.M','2 P.M','3 P.M','4 P.M','5 P.M','6 P.M','7 P.M','8 P.M'],
+        //data values used
+        datasets: [{
+        label: 'Carbon intensity gCO₂/kWh',
+        data: [70, 30, 30, 50, 20, 30, 30 ,40 , 50, 30, 40, 50, 40,40,30,20,50,12,43,67],backgroundColor: [
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'red',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green',
+        'green'
+            ], categoryPercentage: 1.0,
+      barPercentage: 1.0,
+        borderWidth: 1
+      }]
+      
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+        </div>
+        <!-- second grapgh conainer (line) -->
+
+            <div class = "thirdtab"> 
+<!-- creates a space for the grapgh to be drawn-->
+
+<canvas alt = "main menu 2" id="linechart"></canvas>
+<script>
+const linectx = document.getElementById('linechart');
+
+new Chart(linectx, {
+  type: 'line',
+
+  data: {
+    //label for data
+    labels: [
+      'monday','tuesday','wednesday','thursday','friday',
+      'sarturday','sunday'
+    ],
+// data values
+    datasets: [{
+      label: 'Carbon intensity gCO₂/kWh',
+
+      data: [
+        80,40,30,50,70,20,30
+      ],
+
+      borderColor: 'red',     
+      backgroundColor: 'white', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    },
+
+      {label: 'solar power gCO₂/kWh',
+
+      data: [
+        20,40,20,60,80,60,50
+      ],
+
+      borderColor: 'orange',     
+      backgroundColor: 'white', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }
+, {label: 'hydro power gCO₂/kWh',
+
+      data: [
+        200,140,130,120,140,150,60
+      ],
+
+      borderColor: 'green',     
+      backgroundColor: 'white', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }]
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+</script>
+</div>
+        </div>
+        <div class = "tabs">
+          <!--  third grapgh container (pie)-->
+
+            <div class = "fourthtab"> 
+              <!-- creates space for the data -->
+
+              <canvas alt = "main menu 3" id="myChartpie"></canvas>
+              <!-- draws the grapgh -->
+
+              <script>
+const ctxpie = document.getElementById('myChartpie');
+
+new Chart(ctxpie, {
+  type: 'pie',
+
+  data: {
+    //label for the data
+    labels: [
+      'wind','hydro','solar','gas','nuclear',
+      'oil','coal'
+    ],
+    //data values
+    datasets: [{
+      label: 'Carbon intensity gCO₂/kWh',
+
+      data: [
+        4,11,14,15,24,12,20
+      ],
+
+      borderColor: 'black',     
+      backgroundColor: ['#d5edff','blue','yellow','#b99079','#940000','#595f61','#040400'], 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    },
+
+      ]
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+</script>
+            </div>
+        </div>
+        <div class = "tabs">
+          <!-- fourth grapgh container (line) -->
+
+            <div class = "fithtab"> 
+              <!-- creates space for the data to be drown -->
+
+              <canvas id="linechart1"></canvas>
+              <!-- drawns the grapgh -->
+
+<script>
+const linectx1 = document.getElementById('linechart1');
+
+new Chart(linectx1, {
+  type: 'line',
+
+  data: {
+    //label for the data
+    labels: [
+      'monday','tuesday','wednesday','thursday','friday',
+      'sarturday','sunday'
+    ],
+//data values 
+    datasets: [{
+      label: 'National Demnad Energy',
+
+      data: [
+        280,240,230,250,260,220,240
+      ],
+
+      borderColor: 'red',     
+      backgroundColor: 'red', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    },
+
+      {label: 'Actual Demnad Net',
+
+      data: [
+        220,240,220,270,280,250,260
+      ],
+
+      borderColor: 'orange',     
+      backgroundColor: 'orange', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }
+, {label: 'Actual Demand Gross',
+
+      data: [
+        200,240,230,220,300,250,260
+      ],
+
+      borderColor: 'green',     
+      backgroundColor: 'green', 
+      borderWidth: 1,
+      tension: 0.4,             
+
+      fill: false,              
+      pointRadius: 5,           
+      pointHoverRadius: 8
+    }]
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    scales: {
+      y: {
+        beginAtZero: false
+      }
+    }
+  }
+});
+</script>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- footer that contains information   -->
+
+        <footer class = "footer">
+            <h2>UNIENERGY</h2>
+            <p>providing reliable energy through out the countrty
+
+            </p>
+            <ul>
+                <li> <a href  = "index.html">HOME</a> </li>
+                <li> <a href  = "history.html">HISTORY</a> </li>
+                <li> <a href  = "about.html">ABOUTUS</a> </li>
+                <li> <a href  = "news.html">NEWS</a> </li>
+            </ul>
+            © 2026 Acme Studio Ltd. All rights reserved.
+        </footer>
+
+        </body>
+</html>    
